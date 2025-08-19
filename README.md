@@ -1,6 +1,6 @@
 # SIAKAD-SMK-PELNUS-LARAVEL-11
 
-SIAKAD-SMK-PELNUS-LARAVEL-11 adalah sebuah sistem informasi akademik untuk Sekolah Menengah Kejuruan (SMk) yang dikembangkan menggunakan framework Laravel.
+SIAKAD-SMK-PELNUS-LARAVEL-11 adalah sebuah sistem informasi akademik untuk Sekolah Menengah Kejuruan (SMK) yang dikembangkan menggunakan framework Laravel.
 
 ## Fitur
 
