@@ -24,8 +24,16 @@ function set_active( $route ) {
 
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('landing.index');
 });
+// Route::get('/login', function () {
+//     return view('auth.login');
+// });
+// routes/web.php
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
 
 Route::group(['middleware'=>'auth'],function()
 {
