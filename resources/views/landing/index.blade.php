@@ -119,7 +119,7 @@
 
                     <!-- tombol -->
                     <div class="flex items-center mt-8 space-x-4">
-                        <a href="#"
+                        <a href="{{ route('login') }}"
                             class="bg-blue-700 text-white px-8 py-4 rounded-3xl font-semibold shadow-xl hover:bg-blue-800 transition duration-300">
                             Get Started
                         </a>
@@ -141,7 +141,7 @@
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center">
                     <div class="relative max-w-[400px]">
-                        <img src="{{ asset('images/skl.jpg') }}" alt="Foto sekolah"
+                        <img src="{{ asset('images/scl.jpg') }}" alt="Foto sekolah"
                             class="rounded-3xl shadow-xl w-full object-cover" />
 
                         <!-- Caption atas kanan -->
@@ -236,6 +236,10 @@
     <!-- Profil Sekolah -->
     <section id="profil" class="py-16 bg-gray-50">
         <div class="container mx-auto px-20 mt-10">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">PROFIL SMK NU <br>PELITA NUSANTARA</h2>
+            </div>
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
                     <img src="https://placehold.co/600x400"
@@ -243,17 +247,15 @@
                         class="rounded-lg shadow-lg w-full">
                 </div>
                 <div class="lg:w-1/2">
-                    <h2 class="text-3xl font-bold text-blue-800 mb-6">Profil SMK NU Pelita Nusantara</h2>
+                    <h2 class="text-3xl font-bold text-black mb-6">Sembutan Kepala Sekolah SMK NU PELNUS</h2>
                     <p class="text-gray-600 mb-4">
-                        SMK Nurul NU Pelita Nusantara adalah sekolah menengah kejuruan yang berkomitmen untuk membentuk
-                        siswa
-                        menjadi sumber daya manusia yang kompeten dan berakhlak mulia.
+                        Sekolah adalah tempat mencetak penerus bangsa yang
+                        berkualitas dan berprestasi di segala bidang yang dapat
+                        bersaing di dunia internasional
+                        dan Sekolah adalah tempat anak-anak mendapatkan
+                        dukungan untuk melengkapi pembelajarannya di sekolah
                     </p>
-                    <p class="text-gray-600 mb-6">
-                        Dengan berbagai program studi yang berkualitas dan tenaga pengajar profesional, kami
-                        siap
-                        membimbing siswa menjadi tenaga kerja terampil di bidangnya masing-masing.
-                    </p>
+
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="flex items-center">
                             <div class="mr-3 text-blue-600 text-xl"><i class="fas fa-graduation-cap"></i>
@@ -288,7 +290,7 @@
                     </div>
                     <button
                         class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold transition duration-300">
-                        Baca Selengkapnya
+                        Baca Selanjutnya
                     </button>
                 </div>
             </div>

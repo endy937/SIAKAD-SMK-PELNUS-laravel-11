@@ -2,9 +2,20 @@
 @section('content')
     {{-- message --}}
     {!! Toastr::message() !!}
-    <div class="login-right">
+    <div class="login-right" style="position:relative;">
+        <!-- tombol kembali -->
+        <div style="position:absolute; top:10px; right:10px;">
+            <a href="{{ url('/') }}" style="position:absolute; top:10px; right:10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 8 8 12 12 16"></polyline>
+                    <line x1="16" y1="12" x2="8" y2="12"></line>
+                </svg>
+            </a>
+        </div>
         <div class="login-right-wrap">
-            <h1> SIAKAD SMK NU PELITA NUSANTARA</h1>
+            <h1> SIAKAD SMK NU Pelita Nusantara</h1>
             <p class="account-subtitle">Belum Mempunyai Akun? <a href="{{ route('register') }}">Buat Akun</a></p>
             <h2> Masuk</h2>
             <form action="{{ route('login') }}" method="POST">
@@ -20,29 +31,10 @@
                         name="password">
                     <span class="profile-views feather-eye toggle-password"></span>
                 </div>
-                {{-- <div class="forgotpass">
-                <div class="remember-me">
-                    <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
-                        <input type="checkbox" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <a href="forgot-password.html">Forgot Password?</a>
-            </div> --}}
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">Masuk</button>
                 </div>
             </form>
-            {{-- <div class="login-or">
-            <span class="or-line"></span>
-            <span class="span-or">or</span>
-        </div>
-        <div class="social-login">
-            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </div>
-</div> --}}
-        @endsection
+@endsection

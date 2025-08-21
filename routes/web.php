@@ -1,6 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserManagementController;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\AccountsController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
+
 
 /*
 |--------------------------------------------------------------------------
