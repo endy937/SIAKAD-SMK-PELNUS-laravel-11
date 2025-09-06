@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -15,20 +16,21 @@
     <link rel="stylesheet" href="{{ URL::to('assets/plugins/datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ URL::to('assets/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ URL::to('assets/css/style.css') }}">
-	{{-- message toastr --}}
-	<link rel="stylesheet" href="{{ URL::to('assets/css/toastr.min.css') }}">
-	<script src="{{ URL::to('assets/js/toastr_jquery.min.js') }}"></script>
-	<script src="{{ URL::to('assets/js/toastr.min.js') }}"></script>
+    {{-- message toastr --}}
+    <link rel="stylesheet" href="{{ URL::to('assets/css/toastr.min.css') }}">
+    <script src="{{ URL::to('assets/js/toastr_jquery.min.js') }}"></script>
+    <script src="{{ URL::to('assets/js/toastr.min.js') }}"></script>
 </head>
+
 <body>
     <div class="main-wrapper">
         <div class="header">
             <div class="header-left">
                 <a href="{{ route('home') }}" class="logo">
-                    <span> SMAN 1 LHOKSEUMAWE</span>
+                    <span> SMK NU PELNUS</span>
                 </a>
                 <a href="{{ route('home') }}" class="logo logo-small">
-                    <span> SMAN 1</span>
+                    <span> SMK PELNUS</span>
                 </a>
             </div>
             <div class="menu-toggle">
@@ -59,7 +61,7 @@
                         </div>
                     </div> --}}
                 </li>
-{{-- 
+                {{-- 
                 <li class="nav-item dropdown noti-dropdown me-2">
                     <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
                         <img src="{{ URL::to('assets/img/icons/header-icon-05.svg') }}" alt="">
@@ -149,7 +151,8 @@
                 <li class="nav-item dropdown has-arrow new-user-menus">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <span class="user-img">
-                            <img class="rounded-circle" src="/images/{{ Session::get('avatar') }}" width="31"alt="{{ Session::get('name') }}">
+                            <img class="rounded-circle" src="/images/{{ Session::get('avatar') }}"
+                                width="31"alt="{{ Session::get('name') }}">
                             <div class="user-text">
                                 <h6>{{ Session::get('name') }}</h6>
                                 <p class="text-muted mb-0">{{ Session::get('role_name') }}</p>
@@ -159,7 +162,8 @@
                     <div class="dropdown-menu">
                         <div class="user-header">
                             <div class="avatar avatar-sm">
-                                <img src="/images/{{ Session::get('avatar') }}" alt="{{ Session::get('name') }}" class="avatar-img rounded-circle">
+                                <img src="/images/{{ Session::get('avatar') }}" alt="{{ Session::get('name') }}"
+                                    class="avatar-img rounded-circle">
                             </div>
                             <div class="user-text">
                                 <h6>{{ Session::get('name') }}</h6>
@@ -173,11 +177,11 @@
                 </li>
             </ul>
         </div>
-		{{-- side bar --}}
-		@include('sidebar.sidebar')
-		{{-- content page --}}
+        {{-- side bar --}}
+        @include('sidebar.sidebar')
+        {{-- content page --}}
         @yield('content')
-    
+
     </div>
 
     <script src="{{ URL::to('assets/js/jquery-3.6.0.min.js') }}"></script>
@@ -203,4 +207,5 @@
         });
     </script>
 </body>
+
 </html>
