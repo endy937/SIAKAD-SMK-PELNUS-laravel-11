@@ -11,6 +11,8 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\AccountsController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\Setting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
@@ -100,9 +102,9 @@ Route::group(['namespace' => 'App\Http\Controllers'],function()
     });
 
     // ------------------------ setting -------------------------------//
-    // Route::controller(Setting::class)->group(function () {
-    //     Route::get('setting/page', 'index')->middleware('auth')->name('setting/page');
-    // });
+    Route::controller(Setting::class)->group(function () {
+        Route::get('setting/page', 'index')->middleware('auth')->name('setting/page');
+    });
 
 
     // ------------------------ information-------------------------------//
@@ -117,15 +119,15 @@ Route::group(['namespace' => 'App\Http\Controllers'],function()
 
     });
 
-    // Route::prefix('berita')->group(function () {
-    //     Route::get('/add', 'BeritaController@create')->name('berita.create');
-    //     Route::get('/edit/{id}', 'BeritaController@edit')->name('berita.edit');
-    //     Route::get('/list', 'BeritaController@index')->name('berita.index');
-    //     Route::post('/store', 'BeritaController@store')->name('berita.store');
-    //     Route::post('/update/{id}', 'BeritaController@update')->name('berita.update');
-    //     Route::post('/destroy/{id}', 'BeritaController@destroy')->name('berita.destroy');
-    //     Route::post('/get-data-list', 'BeritaController@getDataList')->name('berita.get-data-list');
-    // });
+    Route::prefix('berita')->group(function () {
+        Route::get('/add', 'BeritaController@create')->name('berita.create');
+        Route::get('/edit/{id}', 'BeritaController@edit')->name('berita.edit');
+        Route::get('/list', 'BeritaController@index')->name('berita.index');
+        Route::post('/store', 'BeritaController@store')->name('berita.store');
+        Route::post('/update/{id}', 'BeritaController@update')->name('berita.update');
+        Route::post('/destroy/{id}', 'BeritaController@destroy')->name('berita.destroy');
+        Route::post('/get-data-list', 'BeritaController@getDataList')->name('berita.get-data-list');
+    });
 
     // ------------------------ student -------------------------------//
     Route::controller(StudentController::class)->group(function () {
@@ -173,24 +175,24 @@ Route::group(['namespace' => 'App\Http\Controllers'],function()
     });
 
     // ----------------------- invoice -----------------------------//
-    // Route::controller(InvoiceController::class)->group(function () {
-    //     Route::get('invoice/list/page', 'invoiceList')->middleware('auth')->name('invoice/list/page'); // subjeinvoicect/list/page
-    //     Route::get('invoice/paid/page', 'invoicePaid')->middleware('auth')->name('invoice/paid/page'); // invoice/paid/page
-    //     Route::get('invoice/overdue/page', 'invoiceOverdue')->middleware('auth')->name('invoice/overdue/page'); // invoice/overdue/page
-    //     Route::get('invoice/draft/page', 'invoiceDraft')->middleware('auth')->name('invoice/draft/page'); // invoice/draft/page
-    //     Route::get('invoice/recurring/page', 'invoiceRecurring')->middleware('auth')->name('invoice/recurring/page'); // invoice/recurring/page
-    //     Route::get('invoice/cancelled/page', 'invoiceCancelled')->middleware('auth')->name('invoice/cancelled/page'); // invoice/cancelled/page
-    //     Route::get('invoice/grid/page', 'invoiceGrid')->middleware('auth')->name('invoice/grid/page'); // invoice/grid/page
-    //     Route::get('invoice/add/page', 'invoiceAdd')->middleware('auth')->name('invoice/add/page'); // invoice/add/page
-    //     Route::post('invoice/add/save', 'saveRecord')->name('invoice/add/save'); // invoice/add/save
-    //     Route::post('invoice/update/save', 'updateRecord')->name('invoice/update/save'); // invoice/update/save
-    //     Route::post('invoice/delete', 'deleteRecord')->name('invoice/delete'); // invoice/delete
-    //     Route::get('invoice/edit/{invoice_id}', 'invoiceEdit')->middleware('auth')->name('invoice/edit/page'); // invoice/edit/page
-    //     Route::get('invoice/view/{invoice_id}', 'invoiceView')->middleware('auth')->name('invoice/view/page'); // invoice/view/page
-    //     Route::get('invoice/settings/page', 'invoiceSettings')->middleware('auth')->name('invoice/settings/page'); // invoice/settings/page
-    //     Route::get('invoice/settings/tax/page', 'invoiceSettingsTax')->middleware('auth')->name('invoice/settings/tax/page'); // invoice/settings/tax/page
-    //     Route::get('invoice/settings/bank/page', 'invoiceSettingsBank')->middleware('auth')->name('invoice/settings/bank/page'); // invoice/settings/bank/page
-    // });
+    Route::controller(InvoiceController::class)->group(function () {
+        Route::get('invoice/list/page', 'invoiceList')->middleware('auth')->name('invoice/list/page'); // subjeinvoicect/list/page
+        Route::get('invoice/paid/page', 'invoicePaid')->middleware('auth')->name('invoice/paid/page'); // invoice/paid/page
+        Route::get('invoice/overdue/page', 'invoiceOverdue')->middleware('auth')->name('invoice/overdue/page'); // invoice/overdue/page
+        Route::get('invoice/draft/page', 'invoiceDraft')->middleware('auth')->name('invoice/draft/page'); // invoice/draft/page
+        Route::get('invoice/recurring/page', 'invoiceRecurring')->middleware('auth')->name('invoice/recurring/page'); // invoice/recurring/page
+        Route::get('invoice/cancelled/page', 'invoiceCancelled')->middleware('auth')->name('invoice/cancelled/page'); // invoice/cancelled/page
+        Route::get('invoice/grid/page', 'invoiceGrid')->middleware('auth')->name('invoice/grid/page'); // invoice/grid/page
+        Route::get('invoice/add/page', 'invoiceAdd')->middleware('auth')->name('invoice/add/page'); // invoice/add/page
+        Route::post('invoice/add/save', 'saveRecord')->name('invoice/add/save'); // invoice/add/save
+        Route::post('invoice/update/save', 'updateRecord')->name('invoice/update/save'); // invoice/update/save
+        Route::post('invoice/delete', 'deleteRecord')->name('invoice/delete'); // invoice/delete
+        Route::get('invoice/edit/{invoice_id}', 'invoiceEdit')->middleware('auth')->name('invoice/edit/page'); // invoice/edit/page
+        Route::get('invoice/view/{invoice_id}', 'invoiceView')->middleware('auth')->name('invoice/view/page'); // invoice/view/page
+        Route::get('invoice/settings/page', 'invoiceSettings')->middleware('auth')->name('invoice/settings/page'); // invoice/settings/page
+        Route::get('invoice/settings/tax/page', 'invoiceSettingsTax')->middleware('auth')->name('invoice/settings/tax/page'); // invoice/settings/tax/page
+        Route::get('invoice/settings/bank/page', 'invoiceSettingsBank')->middleware('auth')->name('invoice/settings/bank/page'); // invoice/settings/bank/page
+    });
 
     // ----------------------- accounts ----------------------------//
     Route::controller(AccountsController::class)->group(function () {
